@@ -1,62 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My Website</title>
 	<style>
 		body {
-			background-color: #222;
+			background-image: url('https://images.hdqwalls.com/wallpapers/bthumb/simple-subtle-abstract-dark-minimalism-4k-u9.jpg');
+			/* Path to your background image */
+			background-size: cover;
+			/* Cover the entire background */
+			background-position: center;
+			/* Center the background image */
+			background-repeat: no-repeat;
+			/* Prevent the background image from repeating */
 			color: #fff;
 			font-family: 'Montserrat', sans-serif;
+			margin: 0;
+			padding: 0;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			height: 100vh;
-			margin: 0;
-			padding: 0;
 		}
-		
-		h1 {
-			font-size: 3.5em;
-			margin-bottom: 0;
+
+		header {
 			text-align: center;
-		}
-		
-		h2 {
-			font-size: 1.5em;
-			text-align: center;
-			margin-top: 5px;
 			margin-bottom: 50px;
 		}
-		
+
+		h1 {
+			font-size: 3.5em;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			font-size: 1.5em;
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+
 		.button-container {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
-			margin-bottom: 50px;
+			margin-bottom: 30px;
 		}
-		
+
 		.button {
 			background-color: #fff;
-			color: #222;
+			color: #1a1a1a;
 			padding: 10px 20px;
 			border-radius: 30px;
 			font-size: 1.2em;
 			font-weight: bold;
-			margin: 10px;
+			margin: 5px;
 			text-transform: uppercase;
 			transition: all 0.3s ease-in-out;
 			cursor: pointer;
+			border: none;
 		}
-		
+
 		.button:hover {
 			transform: translateY(-5px);
 			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 		}
-		
+
 		.portfolio {
-			background-color: #bada55;
+			background-color: #4078c0;
+			/* Accent color */
 			color: #fff;
-			padding: 10px 20px;
+			padding: 12px 24px;
 			border-radius: 30px;
 			font-size: 1.2em;
 			font-weight: bold;
@@ -64,8 +80,10 @@
 			text-transform: uppercase;
 			transition: all 0.3s ease-in-out;
 			cursor: pointer;
+			border: none;
+			text-decoration: none;
 		}
-		
+
 		.portfolio:hover {
 			background-color: #fff;
 			color: #bada55;
@@ -74,6 +92,7 @@
 		}
 	</style>
 </head>
+
 <body>
 	<header>
 		<div class="button-container">
@@ -85,7 +104,8 @@
 		</div>
 		<h1>I am Ryan Reeves</h1>
 		<h2>Computer Science Major</h2>
-		<a href="#" class="portfolio">My Portfolio</a>
+		<a href="#" class="portfolio">Github</a>
 	</header>
 </body>
+
 </html>
