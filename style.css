@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff00;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Cursive';
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #4078c0;
+}
+
+.contact-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding-top: 80px;
+    /* To avoid overlapping with the navbar */
+    background-image: url('https://wallpaperaccess.com/full/1853567.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    /* Ensures the image covers the entire background */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    /* Stack images vertically */
+    align-items: center;
+    /* Center align images */
+    padding: 0 20px;
+    /* Add padding on the left and right */
+}
+
+.intro-image {
+    width: 100%;
+    /* Ensure the image takes full width */
+    max-width: 600px;
+    /* Limit max width for larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 10px 0;
+    /* Add some space between the images */
+}
+
+.profile-pic {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border: 5px solid #333;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    padding: 50px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        height: auto;
+        /* Makes sure it doesn't overlap and adapts to content */
+        min-height: 100vh;
+        /* Ensure it fills the entire screen if content is small */
+}
