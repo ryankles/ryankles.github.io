@@ -1,91 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>My Website</title>
-	<style>
-		body {
-			background-color: #222;
-			color: #fff;
-			font-family: 'Montserrat', sans-serif;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			margin: 0;
-			padding: 0;
-		}
-		
-		h1 {
-			font-size: 3.5em;
-			margin-bottom: 0;
-			text-align: center;
-		}
-		
-		h2 {
-			font-size: 1.5em;
-			text-align: center;
-			margin-top: 5px;
-			margin-bottom: 50px;
-		}
-		
-		.button-container {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin-bottom: 50px;
-		}
-		
-		.button {
-			background-color: #fff;
-			color: #222;
-			padding: 10px 20px;
-			border-radius: 30px;
-			font-size: 1.2em;
-			font-weight: bold;
-			margin: 10px;
-			text-transform: uppercase;
-			transition: all 0.3s ease-in-out;
-			cursor: pointer;
-		}
-		
-		.button:hover {
-			transform: translateY(-5px);
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-		}
-		
-		.portfolio {
-			background-color: #bada55;
-			color: #fff;
-			padding: 10px 20px;
-			border-radius: 30px;
-			font-size: 1.2em;
-			font-weight: bold;
-			margin: 10px;
-			text-transform: uppercase;
-			transition: all 0.3s ease-in-out;
-			cursor: pointer;
-		}
-		
-		.portfolio:hover {
-			background-color: #fff;
-			color: #bada55;
-			transform: translateY(-5px);
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ryankles - Personal Portfolio</title>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<header>
-		<div class="button-container">
-			<a href="#" class="button">Link 1</a>
-			<a href="#" class="button">Link 2</a>
-			<a href="#" class="button">Link 3</a>
-			<a href="#" class="button">Link 4</a>
-			<a href="#" class="button">Link 5</a>
+	<!-- Navigation Bar -->
+	<!-- <nav class="navbar">
+		<div class="logo">Ryankles.</div>
+		<ul class="nav-links">
+			<li><a href="#about">About Me</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#experience">Experience</a></li>
+		</ul>
+		<a href="#contact" class="contact-button">Contact Me!</a>
+	</nav> -->
+
+	<nav class="navbar">
+		<div class="logo">
+			<img src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/UnlhbmtsZXMu/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+				alt="Ryankles">
 		</div>
-		<h1>I am Ryan Reeves</h1>
-		<h2>Computer Science Major</h2>
-		<a href="#" class="portfolio">My Portfolio</a>
+		<ul class="nav-links">
+			<li><a href="#about">
+					<img class="about-img"
+						src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/QWJvdXQgTWU/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+						alt="About Me">
+				</a></li>
+			<li><a href="#portfolio">
+					<img class="portfolio-img"
+						src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/UG9ydGZvbGlv/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+						alt="Portfolio">
+				</a></li>
+			<li><a href="#experience">
+					<img class="experience-img"
+						src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/RXhwZXJpZW5jZQ/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+						alt="Experience">
+				</a></li>
+		</ul>
+		<a href="#contact" class="contact-button">
+			<img src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/Q29udGFjdCBNZQ/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+				alt="Contact Me">
+		</a>
+
+	</nav>
+
+
+
+	<!-- Main Section -->
+	<header class="main-header">
+		<div class="intro-container">
+			<div class="intro-text">
+				<img src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/SGkhIEkgYW0s/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+					alt="Text Image 1" class="intro-image">
+				<img src="https://see.fontimg.com/api/rf5/L36y3/MGE3YzA3NWYyY2NkNDI4MTgyZDk3OWFjY2JkMDE1MjMub3Rm/UnlhbiBSZWV2ZXM/boogie-boys-regular.png?r=fs&h=65&w=1000&fg=000000&bg=FFFFFF&tb=1&s=65"
+					alt="Text Image 2" class="intro-image">
+			</div>
+			<div class="profile-pic">
+				<img src="https://www.bing.com/images/blob?bcid=Tx9CGQKhAIwHPBoG-4M.Tg4bN-Ke.....zM" alt="Profile Picture">
+			</div>
+		</div>
 	</header>
+	<!-- About Section -->
+	<section id="about" class="about-section">
+		<h2>About Me</h2>
+		<p>I am an Undergraduate Computer Science student, looking to go to graduate school to study Artificial
+			Intelligence.</p>
+		<p>This text is now filler just to hold the place until I actually figure out how.</p>
+	</section>
 </body>
+
 </html>

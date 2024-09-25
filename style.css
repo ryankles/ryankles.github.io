@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo Image */
+.logo img {
+    height: 40px;
+    /* Adjust size as needed */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+/* Specific Image Sizes for Navigation Links */
+
+/* About Me Image */
+.about-img {
+    width: 85px;
+    /* Adjust width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Portfolio Image */
+.portfolio-img {
+    width: 70px;
+    /* Adjust width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Experience Image */
+.experience-img {
+    width: 85px;
+    /* Adjust width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Contact Button */
+.contact-button {
+    display: inline-block;
+    /* Ensures the button wraps around the content */
+    background-color: #08f5de;
+    /* Green background */
+    border-radius: 50px;
+    /* Rounded corners */
+    padding: 13px;
+    /* Padding around the image */
+    text-decoration: none;
+    /* Remove underline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    vertical-align: middle;
+    /* Aligns the button with surrounding elements */
+}
+
+.contact-button:hover {
+    background-color: #feffff;
+    /* Darker green on hover */
+}
+
+.contact-button img {
+    height: 20px;
+    /* Adjust size for the contact button image */
+    display: block;
+    /* Ensure it behaves like a block element */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .nav-links a img {
+        width: 80px;
+        /* Smaller size for mobile screens */
+    }
+
+    .contact-button img {
+        height: 40px;
+    }
+}
+
+/* Main Header */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding-top: 80px;
+    /* To avoid overlapping with the navbar */
+    background-image: url('https://wallpaperaccess.com/full/1853567.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    /* Ensures the image covers the entire background */
+    background-position: center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+}
+
+/* Flexbox container to align text and image */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Limits the width of the content */
+    margin: 0 auto;
+    /* Centers the container */
+    padding: 0 40px;
+    /* Adds padding on left and right */
+}
+
+/* Stack images in the intro-text vertically */
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the images vertically */
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.intro-image {
+    width: 100%;
+    /* Ensure the image takes full width */
+    max-width: 400px;
+    /* Limit max width for larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 10px 0;
+    /* Add some space between the images */
+}
+
+/* Profile image remains on the right */
+.profile-pic {
+    flex: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-pic img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    border: 5px solid #333;
+}
+
+/* Adjust for responsive screens */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text,
+    .profile-pic {
+        padding: 10px;
+    }
+}
+/* About Section */
+.about-section {
+    padding: 50px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    padding: 50px;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+        height: auto;
+        /* Makes sure it doesn't overlap and adapts to content */
+        min-height: 100vh;
+        /* Ensure it fills the entire screen if content is small */
+}
