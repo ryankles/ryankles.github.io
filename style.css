@@ -210,22 +210,19 @@ body {
     background-color: #222;
     color: #fff;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    /* Align content to the right */
+    height: auto;
+    min-height: 100vh;
+    /* Ensure it fills the entire screen */
 }
 
-.about-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.about-section p {
-    padding: 50px;
-        background-color: #222;
-        color: #fff;
-        text-align: center;
-        height: auto;
-        /* Makes sure it doesn't overlap and adapts to content */
-        min-height: 100vh;
-        /* Ensure it fills the entire screen if content is small */
+.about-section .content-wrapper {
+    width: 50%;
+    /* Take up half the screen */
+    padding: 20px;
+    text-align: center;
 }
 
 /* Modal Styles */
