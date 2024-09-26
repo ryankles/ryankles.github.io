@@ -37,6 +37,17 @@ body {
     list-style-type: none;
 }
 
+/* Zoom effect on navigation images */
+.nav-links img {
+    transition: transform 0.3s ease;
+    /* Smooth transition for zoom */
+}
+
+.nav-links img:hover {
+    transform: scale(1.1);
+    /* Slightly zoom in */
+}
+
 /* Specific Image Sizes for Navigation Links */
 
 /* About Me Image */
@@ -84,7 +95,7 @@ body {
 }
 
 .contact-button:hover {
-    background-color: #feffff;
+    background-color: #1aa934;
     /* Darker green on hover */
 }
 
@@ -93,6 +104,13 @@ body {
     /* Adjust size for the contact button image */
     display: block;
     /* Ensure it behaves like a block element */
+    transition: transform 0.3s ease;
+    /* Smooth transition for zoom */
+}
+
+.contact-button:hover img {
+    transform: scale(1.1);
+    /* Slightly zoom in */
 }
 
 /* Ensure responsiveness */
@@ -208,4 +226,147 @@ body {
         /* Makes sure it doesn't overlap and adapts to content */
         min-height: 100vh;
         /* Ensure it fills the entire screen if content is small */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #1d1d1d;
+    /* Dark background */
+    margin: 15% auto;
+    /* Centered */
+    padding: 20px;
+    /* Padding */
+    border: 1px solid #000000;
+    /* Border */
+    width: 400px;
+    /* Set width */
+    height: 200px;
+    /* Set height to match width for square shape */
+    max-width: 80%;
+    /* Maximum width */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    /* Shadow for depth */
+    color: #ffffff;
+    /* Text color */
+}
+
+.close-button {
+    color: #aaa;
+    /* Gray */
+    float: right;
+    /* Align to the right */
+    font-size: 28px;
+    /* Larger size */
+    font-weight: bold;
+    /* Bold */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(255, 255, 255);
+    /* White on hover */
+    text-decoration: none;
+    /* No underline */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Optional: Add a heading style for modal */
+.modal-content h2 {
+    margin-top: 0;
+    /* Remove margin on top */
+}
+
+/* Optional: Style for modal text */
+.modal-content p {
+    font-size: 1em;
+    /* Font size */
+    line-height: 1.5;
+    /* Line height */
+    margin: 10px 0;
+    /* Margin for spacing */
+}
+
+/* Button Grid Styles */
+.button-grid {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    margin-top: 20px;
+    /* Space from the heading */
+}
+/*Size and style for button 1*/
+.button-grid .modal-button:nth-child(1) img {
+    width: 56%;
+    /* Custom width for the first button */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+/*Size and style for button 2*/
+.button-grid .modal-button:nth-child(2) img {
+    width: 100%;
+    /* Custom width for the second button */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.modal-button {
+    display: flex;
+    /* Ensure it behaves like a button */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    width: 80px;
+    /* Set a fixed width */
+    height: 80px;
+    /* Set a fixed height for square shape */
+    text-decoration: none;
+    /* Remove underline from links */
+    border-radius: 8px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+.modal-button img {
+    width: 100%;
+    /* Make the image fill the button */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Match button border radius */
+    transition: transform 0.3s;
+    /* Smooth zoom effect */
+}
+
+.modal-button:hover img {
+    transform: scale(1.1);
+    /* Zoom in effect on hover */
 }
