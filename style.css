@@ -323,7 +323,7 @@ body {
 }
 /*Size and style for button 1*/
 .button-grid .modal-button:nth-child(1) img {
-    width: 56%;
+    width: 75%;
     /* Custom width for the first button */
     height: auto;
     /* Maintain aspect ratio */
