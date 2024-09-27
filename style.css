@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f3f3f3;
     color: #333;
-    padding-top: 150px;
+    padding-top: 0px;
 }
 
 /* Navbar */
@@ -21,6 +21,7 @@ body {
     padding: 30px;
     position: fixed;
     width: 100%;
+    height: 100px;
     top: 0;
     z-index: 100;
 }
@@ -104,6 +105,13 @@ body {
 
 /* Hide normal nav links on mobile */
 @media (max-width: 768px) {
+    
+    /*Padding modification for navbar*/
+    .body {
+        padding: 100px 0 0 0;
+        /* Mobile navbar height */
+    }
+    
     .nav-links {
         display: none;
         position: absolute;
@@ -111,8 +119,11 @@ body {
         left: 0;
         width: 100%;
         flex-direction: column;
+        /* Stack items vertically */
         background-color: #fff;
         padding: 20px 0;
+        text-align: center;
+        /* Center text in the dropdown */
     }
 
     /* Show the hamburger icon */
@@ -122,6 +133,29 @@ body {
 
     .nav-links li {
         margin-bottom: 10px;
+        display: flex;
+        /* Use flex to help with centering */
+        justify-content: center;
+        /* Center items horizontally */
+    }
+
+    /* Center images inside the links */
+    .nav-links li img {
+        display: block;
+        margin: 0 auto;
+        /* Center the images */
+    }
+
+    /* Specific styling for the contact button to maintain its appearance */
+    .contact-button {
+        display: inline-flex;
+        /* Maintain the inline-flex layout */
+        justify-content: center;
+        /* Center content */
+        align-items: center;
+        /* Center vertically */
+        margin: 0 auto;
+        /* Center the button itself */
     }
 
     /* Show menu when open */
@@ -136,7 +170,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    padding-top: 80px;
+    padding-top: 0px;
+    margin-top: 0px;
     /* To avoid overlapping with the navbar */
     background-image: url('https://wallpaperaccess.com/full/1853567.jpg');
     /* Replace with your image path */
