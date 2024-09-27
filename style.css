@@ -103,67 +103,6 @@ body {
     background-color: black;
 }
 
-/* Hide normal nav links on mobile */
-@media (max-width: 768px) {
-    
-    /*Padding modification for navbar*/
-    .body {
-        padding: 100px 0 0 0;
-        /* Mobile navbar height */
-    }
-    
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        /* Stack items vertically */
-        background-color: #fff;
-        padding: 20px 0;
-        text-align: center;
-        /* Center text in the dropdown */
-    }
-
-    /* Show the hamburger icon */
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-        display: flex;
-        /* Use flex to help with centering */
-        justify-content: center;
-        /* Center items horizontally */
-    }
-
-    /* Center images inside the links */
-    .nav-links li img {
-        display: block;
-        margin: 0 auto;
-        /* Center the images */
-    }
-
-    /* Specific styling for the contact button to maintain its appearance */
-    .contact-button {
-        display: inline-flex;
-        /* Maintain the inline-flex layout */
-        justify-content: center;
-        /* Center content */
-        align-items: center;
-        /* Center vertically */
-        margin: 0 auto;
-        /* Center the button itself */
-    }
-
-    /* Show menu when open */
-    .nav-links.show {
-        display: flex;
-    }
-}
-
 /* Main Header */
 .main-header {
     display: flex;
@@ -406,4 +345,70 @@ body {
 .modal-button:hover img {
     transform: scale(1.1);
     /* Zoom in effect on hover */
+}
+
+/*Media query for responsive design*/
+@media (max-width: 768px) {
+
+    /*Padding modification for navbar*/
+    .body {
+        padding: 100px 0 0 0;
+        /* Mobile navbar height */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        /* Stack items vertically */
+        background-color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        /* Center text in the dropdown */
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+        display: flex;
+        /* Use flex to help with centering */
+        justify-content: center;
+        /* Center items horizontally */
+    }
+
+    /* Center images inside the links */
+    .nav-links li img {
+        display: block;
+        margin: 0 auto;
+        /* Center the images */
+    }
+
+    /* Specific styling for the contact button to maintain its appearance */
+    .contact-button {
+        display: inline-flex;
+        /* Maintain the inline-flex layout */
+        justify-content: center;
+        /* Center content */
+        align-items: center;
+        /* Center vertically */
+        margin: 0 auto;
+        /* Center the button itself */
+    }
+
+    /* Show menu when open */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .main-header {
+        height: 70vh;
+        /* Full height */
+    }
 }
