@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f3f3f3;
     color: #333;
+    padding-top: 0px;
 }
 
 /* Navbar */
@@ -20,6 +21,7 @@ body {
     padding: 30px;
     position: fixed;
     width: 100%;
+    height: 100px;
     top: 0;
     z-index: 100;
 }
@@ -27,7 +29,13 @@ body {
 /* Logo Image */
 .logo img {
     height: 40px;
-    /* Adjust size as needed */
+}
+
+/* Centering nav links */
+.nav-center {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Navigation Links */
@@ -37,74 +45,62 @@ body {
     list-style-type: none;
 }
 
-/* Specific Image Sizes for Navigation Links */
+/* Zoom effect on navigation images */
+.nav-links img {
+    transition: transform 0.3s ease;
+}
 
-/* About Me Image */
+.nav-links img:hover {
+    transform: scale(1.1);
+}
+
+/* Specific Image Sizes for Navigation Links */
 .about-img {
     width: 85px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Portfolio Image */
 .portfolio-img {
     width: 70px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Experience Image */
 .experience-img {
     width: 85px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Contact Button */
+/* Custom styles for Contact Me button */
 .contact-button {
-    display: inline-block;
-    /* Ensures the button wraps around the content */
-    background-color: #08f5de;
-    /* Green background */
-    border-radius: 50px;
-    /* Rounded corners */
-    padding: 13px;
-    /* Padding around the image */
-    text-decoration: none;
-    /* Remove underline */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Optional shadow for depth */
-    transition: background-color 0.3s ease;
-    /* Smooth transition */
-    vertical-align: middle;
-    /* Aligns the button with surrounding elements */
-}
-
-.contact-button:hover {
-    background-color: #feffff;
-    /* Darker green on hover */
+    background-color: #a29e9e;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-button img {
-    height: 20px;
-    /* Adjust size for the contact button image */
-    display: block;
-    /* Ensure it behaves like a block element */
+    width: 90px;
+    height: auto;
 }
 
-/* Ensure responsiveness */
-@media (max-width: 768px) {
-    .nav-links a img {
-        width: 80px;
-        /* Smaller size for mobile screens */
-    }
+.contact-button:hover {
+    background-color: #1bbc2e;
+    transform: scale(1.05);
+}
 
-    .contact-button img {
-        height: 40px;
-    }
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: black;
 }
 
 /* Main Header */
@@ -113,7 +109,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    padding-top: 80px;
+    padding-top: 0px;
+    margin-top: 0px;
     /* To avoid overlapping with the navbar */
     background-image: url('https://wallpaperaccess.com/full/1853567.jpg');
     /* Replace with your image path */
@@ -192,20 +189,226 @@ body {
     background-color: #222;
     color: #fff;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    /* Align content to the right */
+    height: auto;
+    min-height: 100vh;
+    /* Ensure it fills the entire screen */
 }
 
-.about-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.about-section .content-wrapper {
+    width: 50%;
+    /* Take up half the screen */
+    padding: 20px;
+    text-align: center;
 }
 
-.about-section p {
-    padding: 50px;
-        background-color: #222;
-        color: #fff;
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #1d1d1d;
+    /* Dark background */
+    margin: 15% auto;
+    /* Centered */
+    padding: 20px;
+    /* Padding */
+    border: 1px solid #000000;
+    /* Border */
+    width: 400px;
+    /* Set width */
+    height: 200px;
+    /* Set height to match width for square shape */
+    max-width: 80%;
+    /* Maximum width */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    /* Shadow for depth */
+    color: #ffffff;
+    /* Text color */
+}
+
+.close-button {
+    color: #aaa;
+    /* Gray */
+    float: right;
+    /* Align to the right */
+    font-size: 28px;
+    /* Larger size */
+    font-weight: bold;
+    /* Bold */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(255, 255, 255);
+    /* White on hover */
+    text-decoration: none;
+    /* No underline */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+/* Optional: Add a heading style for modal */
+.modal-content h2 {
+    margin-top: 0;
+    /* Remove margin on top */
+}
+
+/* Optional: Style for modal text */
+.modal-content p {
+    font-size: 1em;
+    /* Font size */
+    line-height: 1.5;
+    /* Line height */
+    margin: 10px 0;
+    /* Margin for spacing */
+}
+
+/* Button Grid Styles */
+.button-grid {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: center;
+    /* Center the buttons */
+    margin-top: 20px;
+    /* Space from the heading */
+}
+/*Size and style for button 1*/
+.button-grid .modal-button:nth-child(1) img {
+    width: 75%;
+    /* Custom width for the first button */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+/*Size and style for button 2*/
+.button-grid .modal-button:nth-child(2) img {
+    width: 100%;
+    /* Custom width for the second button */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.modal-button {
+    display: flex;
+    /* Ensure it behaves like a button */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    width: 80px;
+    /* Set a fixed width */
+    height: 80px;
+    /* Set a fixed height for square shape */
+    text-decoration: none;
+    /* Remove underline from links */
+    border-radius: 8px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+.modal-button img {
+    width: 100%;
+    /* Make the image fill the button */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Match button border radius */
+    transition: transform 0.3s;
+    /* Smooth zoom effect */
+}
+
+.modal-button:hover img {
+    transform: scale(1.1);
+    /* Zoom in effect on hover */
+}
+
+/*Media query for responsive design*/
+@media (max-width: 768px) {
+
+    /*Padding modification for navbar*/
+    .body {
+        padding: 100px 0 0 0;
+        /* Mobile navbar height */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        /* Stack items vertically */
+        background-color: #fff;
+        padding: 20px 0;
         text-align: center;
-        height: auto;
-        /* Makes sure it doesn't overlap and adapts to content */
-        min-height: 100vh;
-        /* Ensure it fills the entire screen if content is small */
+        /* Center text in the dropdown */
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+        display: flex;
+        /* Use flex to help with centering */
+        justify-content: center;
+        /* Center items horizontally */
+    }
+
+    /* Center images inside the links */
+    .nav-links li img {
+        display: block;
+        margin: 0 auto;
+        /* Center the images */
+    }
+
+    /* Specific styling for the contact button to maintain its appearance */
+    .contact-button {
+        display: inline-flex;
+        /* Maintain the inline-flex layout */
+        justify-content: center;
+        /* Center content */
+        align-items: center;
+        /* Center vertically */
+        margin: 0 auto;
+        /* Center the button itself */
+    }
+
+    /* Show menu when open */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .main-header {
+        height: 70vh;
+        /* Full height */
+    }
 }
