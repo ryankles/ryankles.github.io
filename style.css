@@ -109,8 +109,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    padding-top: 0px;
-    margin-top: 0px;
+    margin-top: 80px;
     /* To avoid overlapping with the navbar */
     background-image: url('https://wallpaperaccess.com/full/1853567.jpg');
     /* Replace with your image path */
@@ -155,6 +154,7 @@ body {
     /* Maintain aspect ratio */
     margin: 10px 0;
     /* Add some space between the images */
+    margin-top: 20px;
 }
 
 /* Profile image remains on the right */
@@ -162,6 +162,7 @@ body {
     flex: 0;
     text-align: center;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .profile-pic img {
@@ -408,7 +409,7 @@ body {
     }
 
     .main-header {
-        height: 70vh;
+        height: 120vh;
         /* Full height */
     }
 }
