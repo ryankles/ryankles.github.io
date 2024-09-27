@@ -28,7 +28,13 @@ body {
 /* Logo Image */
 .logo img {
     height: 40px;
-    /* Adjust size as needed */
+}
+
+/* Centering nav links */
+.nav-center {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Navigation Links */
@@ -41,88 +47,86 @@ body {
 /* Zoom effect on navigation images */
 .nav-links img {
     transition: transform 0.3s ease;
-    /* Smooth transition for zoom */
 }
 
 .nav-links img:hover {
     transform: scale(1.1);
-    /* Slightly zoom in */
 }
 
 /* Specific Image Sizes for Navigation Links */
-
-/* About Me Image */
 .about-img {
     width: 85px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Portfolio Image */
 .portfolio-img {
     width: 70px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Experience Image */
 .experience-img {
     width: 85px;
-    /* Adjust width */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
-/* Contact Button */
+/* Custom styles for Contact Me button */
 .contact-button {
-    display: inline-block;
-    /* Ensures the button wraps around the content */
-    background-color: #08f5de;
-    /* Green background */
-    border-radius: 50px;
-    /* Rounded corners */
-    padding: 13px;
-    /* Padding around the image */
-    text-decoration: none;
-    /* Remove underline */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Optional shadow for depth */
-    transition: background-color 0.3s ease;
-    /* Smooth transition */
-    vertical-align: middle;
-    /* Aligns the button with surrounding elements */
-}
-
-.contact-button:hover {
-    background-color: #1aa934;
-    /* Darker green on hover */
+    background-color: #a29e9e;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-button img {
-    height: 20px;
-    /* Adjust size for the contact button image */
-    display: block;
-    /* Ensure it behaves like a block element */
-    transition: transform 0.3s ease;
-    /* Smooth transition for zoom */
+    width: 90px;
+    height: auto;
 }
 
-.contact-button:hover img {
-    transform: scale(1.1);
-    /* Slightly zoom in */
+.contact-button:hover {
+    background-color: #1bbc2e;
+    transform: scale(1.05);
 }
 
-/* Ensure responsiveness */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+}
+
+/* Hide normal nav links on mobile */
 @media (max-width: 768px) {
-    .nav-links a img {
-        width: 80px;
-        /* Smaller size for mobile screens */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px 0;
     }
 
-    .contact-button img {
-        height: 40px;
+    /* Show the hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    /* Show menu when open */
+    .nav-links.show {
+        display: flex;
     }
 }
 

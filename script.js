@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactButton = document.getElementById("contactButton");
     const closeButton = document.querySelector(".close-button");
 
+    // Get hamburger menu and navigation links for mobile
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
     // Check if button is working
     console.log("Script loaded");
 
@@ -27,5 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none"; // Hide modal
         }
     }
-});
 
+    // Toggle the visibility of the menu when the hamburger is clicked
+    hamburger.addEventListener('click', function () {
+        menu.classList.toggle('show');
+    });
+});
