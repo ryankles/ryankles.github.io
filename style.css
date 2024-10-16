@@ -191,18 +191,79 @@ body {
     color: #fff;
     text-align: center;
     display: flex;
-    justify-content: flex-end;
-    /* Align content to the right */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
     height: auto;
-    min-height: 100vh;
-    /* Ensure it fills the entire screen */
+    max-height: 50vh;
+    /* Ensure it fills the specified height */
+    font-family: 'Noto Serif', serif;
+}
+
+/* Aligning the image */
+.about-section img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    /* Add space below the image */
 }
 
 .about-section .content-wrapper {
-    width: 50%;
-    /* Take up half the screen */
+    width: auto;
+    /* Customize width */
     padding: 20px;
     text-align: center;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px;
+    background-color: #cfdbe8;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    /* Align content to the left */
+    height: auto;
+    min-height: 100vh;
+    /* Full screen height */
+}
+
+.portfolio-section .content-wrapper {
+    width: 70%;
+    /* Adjust this width as needed */
+    margin: 0 auto;
+    /* Center the content */
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-header {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    /* Add space below the image */
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style for individual portfolio items */
+.portfolio-item {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 8px;
 }
 
 /* Modal Styles */
