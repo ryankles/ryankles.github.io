@@ -222,31 +222,28 @@ body {
 /* Portfolio Section */
 .portfolio-section {
     padding: 50px;
-    background-color: #cfdbe8;
-    color: #fff;
+    background-color: #ffffff;
+    color: #333;
+    /* Changed to dark color for better contrast */
     text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    /* Align content to the left */
     height: auto;
     min-height: 100vh;
     /* Full screen height */
 }
 
+/* Content Wrapper */
 .portfolio-section .content-wrapper {
-    width: 70%;
+    width: auto;
     /* Adjust this width as needed */
     margin: 0 auto;
     /* Center the content */
     padding: 20px;
-    text-align: center;
 }
 
+/* Portfolio Header */
 .portfolio-header {
-    width: 300px;
-    height: auto;
     margin-bottom: 20px;
-    /* Add space below the image */
+    /* Space below header */
 }
 
 /* Portfolio Content */
@@ -254,16 +251,102 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    font-family: 'Noto Serif', serif;
+    /* Space between items */
 }
 
-/* Style for individual portfolio items */
 .portfolio-item {
-    width: 200px;
+    display: flex;
+    /* Use flexbox to position items */
+    justify-content: space-between;
+    /* Space between text and image */
+    align-items: flex-start;
+    /* Align items to the top */
+    width: auto;
+    max-width: 1400px;
     height: auto;
-    padding: 10px;
+    padding: 20px;
     background-color: #444;
-    border-radius: 8px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+/* New div for project info */
+.project-info {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    /* Add flexbox */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: space-between;
+    /* Space between elements */
+    height: 100%;
+    /* Ensure it takes full height */
+}
+
+/* Project Image */
+.project-image {
+    max-width: 500px;
+    /* Adjust width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+/* Tool Icon */
+.tool-icon {
+    width: 20px;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-left: 5px;
+    /* Space between tool icons */
+}
+
+/* Tools Used */
+.tools-used {
+    font-size: 14px;
+    /* Size for tools */
+    margin-bottom: 10px;
+    /* Space below tools */
+}
+
+/* Description */
+.project-description {
+    font-size: 14px;
+    /* Size for description */
+    margin-bottom: 15px;
+    /* Space below description */
+}
+
+/* Button Wrapper */
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* Space buttons evenly */
+}
+
+/* Buttons */
+.button {
+    padding: 10px 15px;
+    /* Padding for buttons */
+    background-color: #666;
+    /* Button background */
+    color: white;
+    /* Button text color */
+    border-radius: 5px;
+    /* Button corners */
+    text-decoration: none;
+    /* Remove underline */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #888;
+    /* Change color on hover */
 }
 
 /* Modal Styles */
