@@ -299,7 +299,7 @@ body {
 }
 /* Tool Icon */
 .tool-icon {
-    width: 20px;
+    width: 30px;
     /* Adjust size as needed */
     height: auto;
     /* Maintain aspect ratio */
@@ -585,7 +585,7 @@ body {
 @media (min-width: 2080px) {
 
     .main-header {
-        height: 50vh;
+        height: 76vh;
     }
 
 }
