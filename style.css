@@ -242,6 +242,7 @@ body {
 
 /* Portfolio Header */
 .portfolio-header {
+    justify-content: center;
     margin-bottom: 20px;
     /* Space below header */
 }
@@ -264,7 +265,7 @@ body {
     align-items: flex-start;
     /* Align items to the top */
     width: auto;
-    max-width: 1400px;
+    max-width: 1200px;
     height: auto;
     padding: 20px;
     background-color: #444;
@@ -282,7 +283,7 @@ body {
     /* Add flexbox */
     flex-direction: column;
     /* Stack items vertically */
-    justify-content: space-between;
+    justify-content: flex-start;
     /* Space between elements */
     height: 100%;
     /* Ensure it takes full height */
@@ -290,7 +291,8 @@ body {
 
 /* Project Image */
 .project-image {
-    max-width: 500px;
+    
+    max-width: 100%;
     /* Adjust width as needed */
     height: auto;
     /* Maintain aspect ratio */
@@ -556,6 +558,20 @@ body {
         height: 120vh;
         /* Full height */
     }
+
+    /*Specifc styling for portfolio section */
+    .portfolio-item {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+        max-width: fit-content;
+    }
+    .button {
+        margin-bottom: 20px;
+    }
+
+
 }
 
 @media (min-width: 768px) {
